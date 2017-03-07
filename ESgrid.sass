@@ -1,9 +1,5 @@
- // A simple grid system.
- // Author: miles0930
-
-=rwd-min($width)
-    @media screen and (min-width: #{$width})
-        @content
+/*  A simple grid system. 
+    Author: miles0930 */
 
 $large: 1200px
 $medium: 768px
@@ -43,7 +39,7 @@ $medium: 768px
 .col-s-1
     width: 6%
 
-+rwd-min($medium)
+@media screen and (min-width: #{$medium})
     .col-m-12
         width: 94%
     .col-m-11
@@ -69,7 +65,7 @@ $medium: 768px
     .col-m-1
         width: 6%
 
-+rwd-min($large)
+@media screen and (min-width: #{$large})
     .col-l-12
         width: 94%
     .col-l-11
