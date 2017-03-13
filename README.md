@@ -18,12 +18,12 @@ Grid Padding: 3%
 @import ESgrid
 ```
 
-### Example
+## Example
 ```html
-<div class="grid-row">
-    <div class="grid-col col-s-12 col-m-6 col-l-3"></div>
-    <div class="grid-col col-s-12 col-m-6 col-l-3"></div>
-    <div class="grid-col col-s-12 col-m-6 col-l-3"></div>
-    <div class="grid-col col-s-12 col-m-6 col-l-3"></div>
+<div class="grid">
+    <div class="col xs-12 gutters-sm-12 gutters-md-6 gutters-lg-3"></div>
+    <div class="col xs-12 gutters-sm-12 gutters-md-6 gutters-lg-3"></div>
+    <div class="col xs-12 gutters-sm-12 gutters-md-6 gutters-lg-3"></div>
+    <div class="col xs-12 gutters-sm-12 gutters-md-6 gutters-lg-3"></div>
 </div>
 ```
