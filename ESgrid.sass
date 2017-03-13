@@ -1,92 +1,67 @@
 /*  A simple grid system. 
     Author: miles0930 */
 
-$large: 1200px
+$xlarge: 1200px
+$large: 992px
 $medium: 768px
+$small: 576px
 
-.grid-row
+.grid
     display: inline-block
     width: 100%
     text-align: center
-.grid-col
+
+.col
     display: inline-block
     vertical-align: top
     overflow: hidden
-    margin: 0 1%
+    
+    @for $i from 1 through 12
+        &.gutters-xs-#{$i}
+            margin: 1%
+            width:  percentage(((6*$i) + ($i - 1)*2)/100)
+    @for $i from 1 through 12
+        &.xs-#{$i}
+            margin: 0
+            width:  percentage(1/12 * $i)
 
-.col-s-12
-    width: 94%
-.col-s-11
-    width: 86%
-.col-s-10
-    width: 78%
-.col-s-9
-    width: 70%
-.col-s-8
-    width: 62%
-.col-s-7
-    width: 54%
-.col-s-6
-    width: 46%
-.col-s-5
-    width: 38%
-.col-s-4
-    width: 30%
-.col-s-3
-    width: 22%
-.col-s-2
-    width: 14%
-.col-s-1
-    width: 6%
+    @media screen and (min-width: #{$small})
+        @for $i from 1 through 12
+            &.gutters-sm-#{$i}
+                margin: 1%
+                width:  percentage(((6*$i) + ($i - 1)*2)/100)
+        @for $i from 1 through 12
+            &.sm-#{$i}
+                margin: 0
+                width:  percentage(1/12 * $i)
 
-@media screen and (min-width: #{$medium})
-    .col-m-12
-        width: 94%
-    .col-m-11
-        width: 86%
-    .col-m-10
-        width: 78%
-    .col-m-9
-        width: 70%
-    .col-m-8
-        width: 62%
-    .col-m-7
-        width: 54%
-    .col-m-6
-        width: 46%
-    .col-m-5
-        width: 38%
-    .col-m-4
-        width: 30%
-    .col-m-3
-        width: 22%
-    .col-m-2
-        width: 14%
-    .col-m-1
-        width: 6%
+    @media screen and (min-width: #{$medium})
+        @for $i from 1 through 12
+            &.gutters-md-#{$i}
+                margin: 1%
+                width: percentage(((6*$i) + ($i - 1)*2)/100)
+        @for $i from 1 through 12
+            &.md-#{$i}
+                margin: 0
+                width:  percentage(1/12 * $i)
 
-@media screen and (min-width: #{$large})
-    .col-l-12
-        width: 94%
-    .col-l-11
-        width: 86%
-    .col-l-10
-        width: 78%
-    .col-l-9
-        width: 70%
-    .col-l-8
-        width: 62%
-    .col-l-7
-        width: 54%
-    .col-l-6
-        width: 46%
-    .col-l-5
-        width: 38%
-    .col-l-4
-        width: 30%
-    .col-l-3
-        width: 22%
-    .col-l-2
-        width: 14%
-    .col-l-1
-        width: 6%
+    @media screen and (min-width: #{$large})
+        @for $i from 1 through 12
+            &.gutters-lg-#{$i}
+                margin: 1%
+                width: percentage(((6*$i) + ($i - 1)*2)/100)
+        @for $i from 1 through 12
+            &.lg-#{$i}
+                margin: 0
+                width:  percentage(1/12 * $i)
+
+    @media screen and (min-width: #{$xlarge})
+        @for $i from 1 through 12
+            &.gutters-xl-#{$i}
+                margin: 1%
+                width: percentage(((6*$i) + ($i - 1)*2)/100)
+        @for $i from 1 through 12
+            &.xl-#{$i}
+                margin: 0
+                width:  percentage(1/12 * $i)
+
