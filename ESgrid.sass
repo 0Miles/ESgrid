@@ -65,3 +65,36 @@ $small: 576px
                 margin: 0
                 width:  percentage(1/12 * $i)
 
+/* table */
+
+.grid-table
+    display: table
+
+@for $i from 1 through 12
+    .table-#{$i}
+        display: table-cell
+        width: percentage(1/12 * $i)
+
+@media screen and (min-width: #{$medium})
+    @for $i from 1 through 12
+        .table-sm-#{$i}
+            display: table-cell
+            width: percentage(1/12 * $i)
+
+@media screen and (min-width: #{$large})
+    @for $i from 1 through 12
+        .table-md-#{$i}
+            display: table-cell
+            width: percentage(1/12 * $i)
+
+@media screen and (min-width: #{$large})
+    @for $i from 1 through 12
+        .table-lg-#{$i}
+            display: table-cell
+            width: percentage(1/12 * $i)
+
+@media screen and (min-width: #{$large})
+    @for $i from 1 through 12
+        .table-xl-#{$i}
+            display: table-cell
+            width: percentage(1/12 * $i)
